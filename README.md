@@ -3,6 +3,9 @@
 ## Description
 StockIT is a Windows Forms app for IT device and component inventory management. 
 
+
+<img src="/images/main.png" width="950" height="500">
+
 ## Features
 - **None**: ...
 
