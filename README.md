@@ -10,8 +10,8 @@ StockIT is a Windows Forms app for IT device and component inventory management.
 | State | Name | Description |
 |---|---|---|
 | [⚫] | **Overview** | Quick view of your inventory. |
-| [⚫] | **Device Inventory** |  | 
-| [⚫] | **Features #3** | Lorem ipsum dolor sit amet. |
+| [⚫] | **Device Inventory** | Active Computer Inventory | 
+| [⚫] | **Component Inventory** | Inventory for cables, peripherals etc... |
 
 ## Prerequisites
 
