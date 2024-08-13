@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace StockIT
+﻿namespace StockIT
 {
     public partial class DeviceControl : UserControl
     {
@@ -16,6 +6,11 @@ namespace StockIT
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// This method is used to insert data into the DataGridView.
+        /// It opens the FormAddDevice form and if the user clicks OK, it adds the data of the properties in FormAddDevice to the DataGridView.
+        /// </summary>
         public void InsertData()
         {
             using (FormAddDevice form = new())

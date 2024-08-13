@@ -35,7 +35,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Name = "OverviewControl";
-            Size = new Size(743, 429);
+            Size = new Size(902, 394);
             ResumeLayout(false);
         }
 

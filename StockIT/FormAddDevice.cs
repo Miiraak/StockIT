@@ -1,12 +1,12 @@
-﻿using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using System.Windows.Forms;
-
-namespace StockIT
+﻿namespace StockIT
 {
     public partial class FormAddDevice : Form
     {
+        /// <summary>
+        /// All the properties that will be used to insert data into the DataGridView.
+        /// </summary>
         public string Site { get; private set; }
-        public int Room { get; private set; }
+        public string Room { get; private set; }
         public string Workstation { get; private set; }
         public string Model { get; private set; }
         public string ServiceTag { get; private set; }
@@ -28,10 +28,15 @@ namespace StockIT
             InitializeComponent();
         }
 
+        /// <summary>
+        /// This method is used to set the values of the public properties.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonOK_Click(object sender, EventArgs e)
         {
             Site = textBoxSite.Text;
-            Room = Convert.ToInt32(textBoxOffice.Text);
+            Room = textBoxOffice.Text;
             Workstation = textBoxWorkstation.Text;
             Model = textBoxModel.Text;
             ServiceTag = textBoxServiceTag.Text;
@@ -49,7 +54,7 @@ namespace StockIT
             Antivirus = checkBoxKaspersky.Checked;
             this.DialogResult = DialogResult.OK;
             this.Close();
-            
+
         }
     }
 }

@@ -2,9 +2,11 @@ namespace StockIT
 {
     public partial class MainMenu : Form
     {
+        Database database = new();
         public MainMenu()
         {
             InitializeComponent();
+            database.InitializeDatabase();
             LoadControl(new OverviewControl());
         }
 
