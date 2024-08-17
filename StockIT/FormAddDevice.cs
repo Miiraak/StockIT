@@ -5,16 +5,16 @@
         /// <summary>
         /// All the properties that will be used to insert data into the DataGridView.
         /// </summary>
-        public string Site { get; private set; }
-        public string Room { get; private set; }
-        public string Workstation { get; private set; }
-        public string Model { get; private set; }
-        public string ServiceTag { get; private set; }
-        public string IP { get; private set; }
-        public string ETH { get; private set; }
-        public string Username { get; private set; }
-        public string SuiteOffice { get; private set; }
-        public string OSVersion { get; private set; }
+        public string? Site { get; private set; }
+        public string? Room { get; private set; }
+        public string? Workstation { get; private set; }
+        public string? Model { get; private set; }
+        public string? ServiceTag { get; private set; }
+        public string? IP { get; private set; }
+        public string? ETH { get; private set; }
+        public string? Username { get; private set; }
+        public string? SuiteOffice { get; private set; }
+        public string? OSVersion { get; private set; }
         public bool Admin { get; private set; }
         public bool VDI { get; private set; }
         public bool WindowsUpdate { get; private set; }
@@ -53,6 +53,7 @@
             Teams = checkBoxNewTeams.Checked;
             Antivirus = checkBoxKaspersky.Checked;
             this.DialogResult = DialogResult.OK;
+
             this.Close();
 
         }

@@ -5,6 +5,7 @@
         public DeviceControl()
         {
             InitializeComponent();
+            DataManagment.LoadFromDataBase(dataGridViewDevice);
         }
 
         /// <summary>
@@ -13,31 +14,44 @@
         /// </summary>
         public void InsertData()
         {
-            using (FormAddDevice form = new())
+            using FormAddDevice form = new();
+            if (form.ShowDialog() == DialogResult.OK)
             {
-                if (form.ShowDialog() == DialogResult.OK)
-                {
-                    dataGridViewDevice.Rows.Add(
-                        form.Site,
-                        form.Room,
-                        form.Workstation,
-                        form.Model,
-                        form.ServiceTag.ToUpper(),
-                        form.IP,
-                        form.ETH,
-                        form.Username,
-                        form.SuiteOffice,
-                        form.OSVersion,
-                        form.Admin,
-                        form.VDI,
-                        form.WindowsUpdate,
-                        form.Chrome,
-                        form.Adobe,
-                        form.Teams,
-                        form.Antivirus
-                        );
-                }
+                dataGridViewDevice.Rows.Add(
+                    form.Site,
+                    form.Room,
+                    form.Workstation,
+                    form.Model,
+                    form.ServiceTag.ToUpper(),
+                    form.IP,
+                    form.ETH,
+                    form.Username,
+                    form.SuiteOffice,
+                    form.OSVersion,
+                    form.Admin,
+                    form.VDI,
+                    form.WindowsUpdate,
+                    form.Chrome,
+                    form.Adobe,
+                    form.Teams,
+                    form.Antivirus
+                    );
             }
+        }
+
+        private void dataGridViewDevice_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            DataManagment.DataGridViewSave(dataGridViewDevice);
+        }
+
+        private void dataGridViewDevice_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+            DataManagment.DataGridViewSave(dataGridViewDevice);
+        }
+
+        private void dataGridViewDevice_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            DataManagment.DataGridViewSave(dataGridViewDevice);
         }
     }
 }
