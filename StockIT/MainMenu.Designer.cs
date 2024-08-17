@@ -41,7 +41,6 @@
             label1 = new Label();
             pictureBox1 = new PictureBox();
             ButtonAdd = new Button();
-            ButtonEdit = new Button();
             tableLayoutPanel2.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
@@ -186,15 +185,15 @@
             // 
             // tableLayoutPanel4
             // 
-            tableLayoutPanel4.ColumnCount = 4;
+            tableLayoutPanel4.ColumnCount = 3;
             tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 30F));
             tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 30F));
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 30F));
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
             tableLayoutPanel4.Controls.Add(label1, 1, 0);
             tableLayoutPanel4.Controls.Add(pictureBox1, 0, 0);
-            tableLayoutPanel4.Controls.Add(ButtonAdd, 3, 0);
-            tableLayoutPanel4.Controls.Add(ButtonEdit, 2, 0);
+            tableLayoutPanel4.Controls.Add(ButtonAdd, 2, 0);
             tableLayoutPanel4.Dock = DockStyle.Fill;
             tableLayoutPanel4.Location = new Point(3, 13);
             tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -238,27 +237,12 @@
             ButtonAdd.Visible = false;
             ButtonAdd.Click += ButtonAdd_Click;
             // 
-            // ButtonEdit
-            // 
-            ButtonEdit.Dock = DockStyle.Fill;
-            ButtonEdit.FlatAppearance.BorderSize = 0;
-            ButtonEdit.FlatStyle = FlatStyle.Flat;
-            ButtonEdit.Image = Properties.Resources.icons8_pencil_24;
-            ButtonEdit.Location = new Point(911, 3);
-            ButtonEdit.Name = "ButtonEdit";
-            ButtonEdit.Size = new Size(24, 23);
-            ButtonEdit.TabIndex = 3;
-            ButtonEdit.UseVisualStyleBackColor = true;
-            ButtonEdit.Visible = false;
-            ButtonEdit.Click += ButtonEdit_Click;
-            // 
             // MainMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(984, 461);
             Controls.Add(tableLayoutPanel1);
-            Cursor = Cursors.Arrow;
             Name = "MainMenu";
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
@@ -281,12 +265,10 @@
         private Panel PanelMenu;
         private Button ButtonExcel;
         private Button ButtonOptions;
-        private Button button2;
         private TableLayoutPanel tableLayoutPanel3;
         private TableLayoutPanel tableLayoutPanel4;
         private Label label1;
         private PictureBox pictureBox1;
         private Button ButtonAdd;
-        private Button ButtonEdit;
     }
 }

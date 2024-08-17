@@ -2,11 +2,9 @@ namespace StockIT
 {
     public partial class MainMenu : Form
     {
-        Database database = new();
         public MainMenu()
         {
             InitializeComponent();
-            database.InitializeDatabase();
             LoadControl(new OverviewControl());
         }
 
@@ -25,20 +23,33 @@ namespace StockIT
         {
             LoadControl(new OverviewControl());
             ButtonAdd.Visible = false;
-            ButtonEdit.Visible = false;
+
+            ButtonOverview.Enabled = false;
+
+            ButtonDevice.Enabled = true;
+            ButtonInventory.Enabled = true;
         }
 
         private void ButtonDevice_Click(object sender, EventArgs e)
         {
             LoadControl(new DeviceControl());
             ButtonAdd.Visible = true;
-            ButtonEdit.Visible = true;
+
+            ButtonDevice.Enabled = false;
+
+
+            ButtonOverview.Enabled = true;
+            ButtonInventory.Enabled = true;
         }
 
         private void ButtonInventory_Click(object sender, EventArgs e)
         {
             ButtonAdd.Visible = true;
-            ButtonEdit.Visible = true;
+
+            ButtonInventory.Enabled = false;
+
+            ButtonOverview.Enabled = true;
+            ButtonDevice.Enabled = true;
         }
 
         // ______________________________________________________________________________________
@@ -52,7 +63,7 @@ namespace StockIT
         /// <param name="e"></param>
         private void ButtonExcel_Click(object sender, EventArgs e)
         {
-
+            ButtonAdd.Visible = false;
         }
 
         /// <summary>
@@ -62,7 +73,7 @@ namespace StockIT
         /// <param name="e"></param>
         private void ButtonOptions_Click(object sender, EventArgs e)
         {
-
+            ButtonAdd.Visible = false;
         }
 
         /// <summary>
@@ -72,21 +83,11 @@ namespace StockIT
         /// <param name="e"></param>
         private void ButtonAdd_Click(object sender, EventArgs e)
         {
-            if (PanelMenu.Controls[0] is DeviceControl)
+
+            if (PanelMenu.Controls[0] is DeviceControl deviceControl)
             {
-                DeviceControl deviceControl = (DeviceControl)PanelMenu.Controls[0];
                 deviceControl.InsertData();
             }
-        }
-
-        /// <summary>
-        /// This method is used to edit the selected row from the table. By editing the form, the data will be updated in the table.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void ButtonEdit_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
