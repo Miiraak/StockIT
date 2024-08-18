@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             dataGridViewDevice = new DataGridView();
             DeviceSite = new DataGridViewTextBoxColumn();
             DeviceRoom = new DataGridViewTextBoxColumn();
@@ -58,18 +59,26 @@
             dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dataGridViewDevice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewDevice.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewDevice.Columns.AddRange(new DataGridViewColumn[] { DeviceSite, DeviceRoom, DeviceName, DeviceModel, DeviceServiceTag, DeviceIP, DeviceETH, DeviceUsername, DeviceOfficeSuite, DeviceOS, DeviceAdmin, DeviceVDI, DeviceWinUpdate, DeviceChrome, DeviceAdobe, DeviceTeams, DeviceAV });
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dataGridViewDevice.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridViewDevice.Dock = DockStyle.Fill;
             dataGridViewDevice.Location = new Point(0, 0);
             dataGridViewDevice.Name = "dataGridViewDevice";
+            dataGridViewDevice.RowTemplate.DefaultCellStyle.Font = new Font("Consolas", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewDevice.Size = new Size(902, 394);
             dataGridViewDevice.TabIndex = 0;
-            dataGridViewDevice.CellValueChanged += dataGridViewDevice_CellValueChanged;
-            dataGridViewDevice.RowsAdded += dataGridViewDevice_RowsAdded;
-            dataGridViewDevice.RowsRemoved += dataGridViewDevice_RowsRemoved;
+            dataGridViewDevice.CellValueChanged += DataGridViewDevice_CellValueChanged;
+            dataGridViewDevice.RowsAdded += DataGridViewDevice_RowsAdded;
+            dataGridViewDevice.RowsRemoved += DataGridViewDevice_RowsRemoved;
             // 
             // DeviceSite
             // 

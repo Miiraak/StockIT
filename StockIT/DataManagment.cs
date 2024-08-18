@@ -57,7 +57,7 @@
                 inventoryItems.Add(item);
             }
 
-            using FileStream fs = new("D_DB.bin", FileMode.Create, FileAccess.Write);
+            using FileStream fs = new("D_DB.bin", FileMode.OpenOrCreate, FileAccess.Write);
             using BinaryWriter writer = new(fs);
 
             foreach (var item in inventoryItems)
