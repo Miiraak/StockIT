@@ -39,17 +39,17 @@
             }
         }
 
-        private void dataGridViewDevice_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        private void DataGridViewDevice_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
             DataManagment.DataGridViewSave(dataGridViewDevice);
         }
 
-        private void dataGridViewDevice_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        private void DataGridViewDevice_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
             DataManagment.DataGridViewSave(dataGridViewDevice);
         }
 
-        private void dataGridViewDevice_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        private void DataGridViewDevice_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             DataManagment.DataGridViewSave(dataGridViewDevice);
         }

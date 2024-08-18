@@ -5,7 +5,7 @@
         [Serializable]
         public class InventoryItem
         {
-            public string? Site { get; set; }                                                      
+            public string? Site { get; set; }
             public string? Room { get; set; }
             public string? Name { get; set; }
             public string? Model { get; set; }
@@ -57,7 +57,7 @@
                 inventoryItems.Add(item);
             }
 
-            using FileStream fs = new("D_DB.bin", FileMode.Create, FileAccess.Write);
+            using FileStream fs = new("D_DB.bin", FileMode.OpenOrCreate, FileAccess.Write);
             using BinaryWriter writer = new(fs);
 
             foreach (var item in inventoryItems)

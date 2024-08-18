@@ -28,77 +28,123 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DeviceAV = new DataGridViewCheckBoxColumn();
-            DeviceTeams = new DataGridViewCheckBoxColumn();
-            DeviceAdobe = new DataGridViewCheckBoxColumn();
-            DeviceChrome = new DataGridViewCheckBoxColumn();
-            DeviceWinUpdate = new DataGridViewCheckBoxColumn();
-            DeviceVDI = new DataGridViewCheckBoxColumn();
-            DeviceAdmin = new DataGridViewCheckBoxColumn();
-            DeviceOS = new DataGridViewTextBoxColumn();
-            DeviceOfficeSuite = new DataGridViewTextBoxColumn();
-            DeviceUsername = new DataGridViewTextBoxColumn();
-            DeviceETH = new DataGridViewTextBoxColumn();
-            DeviceIP = new DataGridViewTextBoxColumn();
-            DeviceServiceTag = new DataGridViewTextBoxColumn();
-            DeviceModel = new DataGridViewTextBoxColumn();
-            DeviceName = new DataGridViewTextBoxColumn();
-            DeviceRoom = new DataGridViewTextBoxColumn();
-            DeviceSite = new DataGridViewTextBoxColumn();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             dataGridViewDevice = new DataGridView();
+            DeviceSite = new DataGridViewTextBoxColumn();
+            DeviceRoom = new DataGridViewTextBoxColumn();
+            DeviceName = new DataGridViewTextBoxColumn();
+            DeviceModel = new DataGridViewTextBoxColumn();
+            DeviceServiceTag = new DataGridViewTextBoxColumn();
+            DeviceIP = new DataGridViewTextBoxColumn();
+            DeviceETH = new DataGridViewTextBoxColumn();
+            DeviceUsername = new DataGridViewTextBoxColumn();
+            DeviceOfficeSuite = new DataGridViewTextBoxColumn();
+            DeviceOS = new DataGridViewTextBoxColumn();
+            DeviceAdmin = new DataGridViewCheckBoxColumn();
+            DeviceVDI = new DataGridViewCheckBoxColumn();
+            DeviceWinUpdate = new DataGridViewCheckBoxColumn();
+            DeviceChrome = new DataGridViewCheckBoxColumn();
+            DeviceAdobe = new DataGridViewCheckBoxColumn();
+            DeviceTeams = new DataGridViewCheckBoxColumn();
+            DeviceAV = new DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridViewDevice).BeginInit();
             SuspendLayout();
             // 
-            // DeviceAV
+            // dataGridViewDevice
             // 
-            DeviceAV.HeaderText = "Antivirus ?";
-            DeviceAV.MinimumWidth = 70;
-            DeviceAV.Name = "DeviceAV";
-            DeviceAV.Width = 70;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Consolas", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewDevice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewDevice.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewDevice.Columns.AddRange(new DataGridViewColumn[] { DeviceSite, DeviceRoom, DeviceName, DeviceModel, DeviceServiceTag, DeviceIP, DeviceETH, DeviceUsername, DeviceOfficeSuite, DeviceOS, DeviceAdmin, DeviceVDI, DeviceWinUpdate, DeviceChrome, DeviceAdobe, DeviceTeams, DeviceAV });
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dataGridViewDevice.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewDevice.Dock = DockStyle.Fill;
+            dataGridViewDevice.Location = new Point(0, 0);
+            dataGridViewDevice.Name = "dataGridViewDevice";
+            dataGridViewDevice.RowTemplate.DefaultCellStyle.Font = new Font("Consolas", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewDevice.Size = new Size(902, 394);
+            dataGridViewDevice.TabIndex = 0;
+            dataGridViewDevice.CellValueChanged += DataGridViewDevice_CellValueChanged;
+            dataGridViewDevice.RowsAdded += DataGridViewDevice_RowsAdded;
+            dataGridViewDevice.RowsRemoved += DataGridViewDevice_RowsRemoved;
             // 
-            // DeviceTeams
+            // DeviceSite
             // 
-            DeviceTeams.HeaderText = "Teams ?";
-            DeviceTeams.MinimumWidth = 70;
-            DeviceTeams.Name = "DeviceTeams";
-            DeviceTeams.Width = 70;
+            DeviceSite.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            DeviceSite.FillWeight = 20F;
+            DeviceSite.HeaderText = "Site";
+            DeviceSite.MinimumWidth = 100;
+            DeviceSite.Name = "DeviceSite";
             // 
-            // DeviceAdobe
+            // DeviceRoom
             // 
-            DeviceAdobe.HeaderText = "Adobe ?";
-            DeviceAdobe.MinimumWidth = 70;
-            DeviceAdobe.Name = "DeviceAdobe";
-            DeviceAdobe.Width = 70;
+            DeviceRoom.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            DeviceRoom.FillWeight = 10F;
+            DeviceRoom.HeaderText = "Room";
+            DeviceRoom.MinimumWidth = 50;
+            DeviceRoom.Name = "DeviceRoom";
             // 
-            // DeviceChrome
+            // DeviceName
             // 
-            DeviceChrome.HeaderText = "Chrome ?";
-            DeviceChrome.MinimumWidth = 70;
-            DeviceChrome.Name = "DeviceChrome";
-            DeviceChrome.Resizable = DataGridViewTriState.True;
-            DeviceChrome.SortMode = DataGridViewColumnSortMode.Automatic;
-            DeviceChrome.Width = 70;
+            DeviceName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            DeviceName.FillWeight = 20F;
+            DeviceName.HeaderText = "Workstation";
+            DeviceName.MinimumWidth = 120;
+            DeviceName.Name = "DeviceName";
             // 
-            // DeviceWinUpdate
+            // DeviceModel
             // 
-            DeviceWinUpdate.HeaderText = "Update ?";
-            DeviceWinUpdate.MinimumWidth = 70;
-            DeviceWinUpdate.Name = "DeviceWinUpdate";
-            DeviceWinUpdate.Width = 70;
+            DeviceModel.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            DeviceModel.FillWeight = 40F;
+            DeviceModel.HeaderText = "Model";
+            DeviceModel.MinimumWidth = 150;
+            DeviceModel.Name = "DeviceModel";
             // 
-            // DeviceVDI
+            // DeviceServiceTag
             // 
-            DeviceVDI.HeaderText = "VDI ?";
-            DeviceVDI.MinimumWidth = 70;
-            DeviceVDI.Name = "DeviceVDI";
-            DeviceVDI.Width = 70;
+            DeviceServiceTag.HeaderText = "Service Tag";
+            DeviceServiceTag.MinimumWidth = 100;
+            DeviceServiceTag.Name = "DeviceServiceTag";
             // 
-            // DeviceAdmin
+            // DeviceIP
             // 
-            DeviceAdmin.HeaderText = "Admin ?";
-            DeviceAdmin.MinimumWidth = 70;
-            DeviceAdmin.Name = "DeviceAdmin";
-            DeviceAdmin.Width = 70;
+            DeviceIP.HeaderText = "IP";
+            DeviceIP.MinimumWidth = 100;
+            DeviceIP.Name = "DeviceIP";
+            // 
+            // DeviceETH
+            // 
+            DeviceETH.HeaderText = "ETH";
+            DeviceETH.MinimumWidth = 70;
+            DeviceETH.Name = "DeviceETH";
+            DeviceETH.Width = 70;
+            // 
+            // DeviceUsername
+            // 
+            DeviceUsername.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            DeviceUsername.HeaderText = "Username";
+            DeviceUsername.MinimumWidth = 100;
+            DeviceUsername.Name = "DeviceUsername";
+            // 
+            // DeviceOfficeSuite
+            // 
+            DeviceOfficeSuite.HeaderText = "Office suite";
+            DeviceOfficeSuite.MinimumWidth = 100;
+            DeviceOfficeSuite.Name = "DeviceOfficeSuite";
+            DeviceOfficeSuite.Resizable = DataGridViewTriState.True;
+            DeviceOfficeSuite.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // DeviceOS
             // 
@@ -109,84 +155,56 @@
             DeviceOS.SortMode = DataGridViewColumnSortMode.NotSortable;
             DeviceOS.Width = 120;
             // 
-            // DeviceOfficeSuite
+            // DeviceAdmin
             // 
-            DeviceOfficeSuite.HeaderText = "Office suite";
-            DeviceOfficeSuite.MinimumWidth = 100;
-            DeviceOfficeSuite.Name = "DeviceOfficeSuite";
-            DeviceOfficeSuite.Resizable = DataGridViewTriState.True;
-            DeviceOfficeSuite.SortMode = DataGridViewColumnSortMode.NotSortable;
+            DeviceAdmin.HeaderText = "Admin ?";
+            DeviceAdmin.MinimumWidth = 70;
+            DeviceAdmin.Name = "DeviceAdmin";
+            DeviceAdmin.Width = 70;
             // 
-            // DeviceUsername
+            // DeviceVDI
             // 
-            DeviceUsername.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            DeviceUsername.HeaderText = "Username";
-            DeviceUsername.MinimumWidth = 100;
-            DeviceUsername.Name = "DeviceUsername";
+            DeviceVDI.HeaderText = "VDI ?";
+            DeviceVDI.MinimumWidth = 70;
+            DeviceVDI.Name = "DeviceVDI";
+            DeviceVDI.Width = 70;
             // 
-            // DeviceETH
+            // DeviceWinUpdate
             // 
-            DeviceETH.HeaderText = "ETH";
-            DeviceETH.MinimumWidth = 70;
-            DeviceETH.Name = "DeviceETH";
-            DeviceETH.Width = 70;
+            DeviceWinUpdate.HeaderText = "Update ?";
+            DeviceWinUpdate.MinimumWidth = 70;
+            DeviceWinUpdate.Name = "DeviceWinUpdate";
+            DeviceWinUpdate.Width = 70;
             // 
-            // DeviceIP
+            // DeviceChrome
             // 
-            DeviceIP.HeaderText = "IP";
-            DeviceIP.MinimumWidth = 100;
-            DeviceIP.Name = "DeviceIP";
+            DeviceChrome.HeaderText = "Chrome ?";
+            DeviceChrome.MinimumWidth = 70;
+            DeviceChrome.Name = "DeviceChrome";
+            DeviceChrome.Resizable = DataGridViewTriState.True;
+            DeviceChrome.SortMode = DataGridViewColumnSortMode.Automatic;
+            DeviceChrome.Width = 70;
             // 
-            // DeviceServiceTag
+            // DeviceAdobe
             // 
-            DeviceServiceTag.HeaderText = "Service Tag";
-            DeviceServiceTag.MinimumWidth = 100;
-            DeviceServiceTag.Name = "DeviceServiceTag";
+            DeviceAdobe.HeaderText = "Adobe ?";
+            DeviceAdobe.MinimumWidth = 70;
+            DeviceAdobe.Name = "DeviceAdobe";
+            DeviceAdobe.Width = 70;
             // 
-            // DeviceModel
+            // DeviceTeams
             // 
-            DeviceModel.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            DeviceModel.FillWeight = 40F;
-            DeviceModel.HeaderText = "Model";
-            DeviceModel.MinimumWidth = 150;
-            DeviceModel.Name = "DeviceModel";
+            DeviceTeams.HeaderText = "Teams ?";
+            DeviceTeams.MinimumWidth = 70;
+            DeviceTeams.Name = "DeviceTeams";
+            DeviceTeams.Width = 70;
             // 
-            // DeviceName
+            // DeviceAV
             // 
-            DeviceName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            DeviceName.FillWeight = 20F;
-            DeviceName.HeaderText = "Workstation";
-            DeviceName.MinimumWidth = 120;
-            DeviceName.Name = "DeviceName";
-            // 
-            // DeviceRoom
-            // 
-            DeviceRoom.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            DeviceRoom.FillWeight = 10F;
-            DeviceRoom.HeaderText = "Room";
-            DeviceRoom.MinimumWidth = 50;
-            DeviceRoom.Name = "DeviceRoom";
-            // 
-            // DeviceSite
-            // 
-            DeviceSite.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            DeviceSite.FillWeight = 20F;
-            DeviceSite.HeaderText = "Site";
-            DeviceSite.MinimumWidth = 100;
-            DeviceSite.Name = "DeviceSite";
-            // 
-            // dataGridViewDevice
-            // 
-            dataGridViewDevice.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewDevice.Columns.AddRange(new DataGridViewColumn[] { DeviceSite, DeviceRoom, DeviceName, DeviceModel, DeviceServiceTag, DeviceIP, DeviceETH, DeviceUsername, DeviceOfficeSuite, DeviceOS, DeviceAdmin, DeviceVDI, DeviceWinUpdate, DeviceChrome, DeviceAdobe, DeviceTeams, DeviceAV });
-            dataGridViewDevice.Dock = DockStyle.Fill;
-            dataGridViewDevice.Location = new Point(0, 0);
-            dataGridViewDevice.Name = "dataGridViewDevice";
-            dataGridViewDevice.Size = new Size(902, 394);
-            dataGridViewDevice.TabIndex = 0;
-            dataGridViewDevice.CellValueChanged += dataGridViewDevice_CellValueChanged;
-            dataGridViewDevice.RowsAdded += dataGridViewDevice_RowsAdded;
-            dataGridViewDevice.RowsRemoved += dataGridViewDevice_RowsRemoved;
+            DeviceAV.HeaderText = "Antivirus ?";
+            DeviceAV.MinimumWidth = 75;
+            DeviceAV.Name = "DeviceAV";
+            DeviceAV.Width = 75;
             // 
             // DeviceControl
             // 
@@ -200,24 +218,23 @@
         }
 
         #endregion
-
-        private DataGridViewCheckBoxColumn DeviceAV;
-        private DataGridViewCheckBoxColumn DeviceTeams;
-        private DataGridViewCheckBoxColumn DeviceAdobe;
-        private DataGridViewCheckBoxColumn DeviceChrome;
-        private DataGridViewCheckBoxColumn DeviceWinUpdate;
-        private DataGridViewCheckBoxColumn DeviceVDI;
-        private DataGridViewCheckBoxColumn DeviceAdmin;
-        private DataGridViewTextBoxColumn DeviceOS;
-        private DataGridViewTextBoxColumn DeviceOfficeSuite;
-        private DataGridViewTextBoxColumn DeviceUsername;
-        private DataGridViewTextBoxColumn DeviceETH;
-        private DataGridViewTextBoxColumn DeviceIP;
-        private DataGridViewTextBoxColumn DeviceServiceTag;
-        private DataGridViewTextBoxColumn DeviceModel;
-        private DataGridViewTextBoxColumn DeviceName;
-        private DataGridViewTextBoxColumn DeviceRoom;
-        private DataGridViewTextBoxColumn DeviceSite;
         private DataGridView dataGridViewDevice;
+        private DataGridViewTextBoxColumn DeviceSite;
+        private DataGridViewTextBoxColumn DeviceRoom;
+        private DataGridViewTextBoxColumn DeviceName;
+        private DataGridViewTextBoxColumn DeviceModel;
+        private DataGridViewTextBoxColumn DeviceServiceTag;
+        private DataGridViewTextBoxColumn DeviceIP;
+        private DataGridViewTextBoxColumn DeviceETH;
+        private DataGridViewTextBoxColumn DeviceUsername;
+        private DataGridViewTextBoxColumn DeviceOfficeSuite;
+        private DataGridViewTextBoxColumn DeviceOS;
+        private DataGridViewCheckBoxColumn DeviceAdmin;
+        private DataGridViewCheckBoxColumn DeviceVDI;
+        private DataGridViewCheckBoxColumn DeviceWinUpdate;
+        private DataGridViewCheckBoxColumn DeviceChrome;
+        private DataGridViewCheckBoxColumn DeviceAdobe;
+        private DataGridViewCheckBoxColumn DeviceTeams;
+        private DataGridViewCheckBoxColumn DeviceAV;
     }
 }
