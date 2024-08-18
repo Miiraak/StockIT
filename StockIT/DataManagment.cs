@@ -5,7 +5,7 @@
         [Serializable]
         public class InventoryItem
         {
-            public string? Site { get; set; }                                                      
+            public string? Site { get; set; }
             public string? Room { get; set; }
             public string? Name { get; set; }
             public string? Model { get; set; }

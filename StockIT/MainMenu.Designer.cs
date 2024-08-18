@@ -186,11 +186,9 @@
             // tableLayoutPanel4
             // 
             tableLayoutPanel4.ColumnCount = 3;
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 30F));
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 40F));
             tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 30F));
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
             tableLayoutPanel4.Controls.Add(label1, 1, 0);
             tableLayoutPanel4.Controls.Add(pictureBox1, 0, 0);
             tableLayoutPanel4.Controls.Add(ButtonAdd, 2, 0);
@@ -206,10 +204,10 @@
             // 
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label1.AutoSize = true;
-            label1.Font = new Font("Consolas", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(33, 0);
+            label1.Font = new Font("Consolas", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(43, 0);
             label1.Name = "label1";
-            label1.Size = new Size(94, 29);
+            label1.Size = new Size(103, 29);
             label1.TabIndex = 0;
             label1.Text = "StockIT";
             label1.TextAlign = ContentAlignment.MiddleLeft;
@@ -218,7 +216,7 @@
             // 
             pictureBox1.Dock = DockStyle.Right;
             pictureBox1.Image = Properties.Resources.icons8_box_24;
-            pictureBox1.Location = new Point(3, 3);
+            pictureBox1.Location = new Point(13, 3);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(24, 23);
             pictureBox1.TabIndex = 1;

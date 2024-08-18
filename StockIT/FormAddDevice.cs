@@ -12,7 +12,7 @@
         public string? ServiceTag { get; private set; }
         public string? IP { get; private set; }
         public string? ETH { get; private set; }
-        public string? Username { get; private set; }
+        public string? Username { get; private set; }       
         public string? SuiteOffice { get; private set; }
         public string? OSVersion { get; private set; }
         public bool Admin { get; private set; }

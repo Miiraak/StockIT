@@ -6,6 +6,7 @@ namespace StockIT
         {
             InitializeComponent();
             LoadControl(new OverviewControl());
+            ButtonOverview.Enabled = false;
         }
 
         /// <summary>
@@ -44,6 +45,7 @@ namespace StockIT
 
         private void ButtonInventory_Click(object sender, EventArgs e)
         {
+            LoadControl(new InventoryControl());
             ButtonAdd.Visible = true;
 
             ButtonInventory.Enabled = false;
